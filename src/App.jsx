@@ -6,6 +6,7 @@ import solarPanelFarm from './assets/solar_panel_farm.jpg'
 import generatorDiesel from './assets/generator_diesel.jpg'
 import electricEquipmentImage from './assets/electric_equipment.jpg'
 import heroBackground from './assets/hero_background.jpeg'
+import whatsappIcon from './assets/whatsapp.png'
 import './App.css'
 
 function App() {
@@ -255,7 +256,6 @@ function App() {
               <MapPin className="w-12 h-12 text-orange-600 mx-auto mb-4" />
               <h3 className="font-bold text-xl mb-2">Location</h3>
               <p className="text-gray-600">Mughalpura, Lahore, Pakistan</p>
-              <p className="text-gray-600">Visit our showroom</p>
             </Card>
           </div>
 
@@ -328,8 +328,8 @@ function App() {
         aria-label="Chat on WhatsApp"
         className="whatsapp-float z-50"
       >
-        {/* Use attached WhatsApp PNG (place in public/whatsapp-logo.png) */}
-        <img src="/src/assets/whatsapp.png" alt="WhatsApp" />
+{/* Use attached WhatsApp PNG (place in public/whatsapp-logo.png) */}
+<img src={whatsappIcon} alt="WhatsApp" />
       </a>
     </div>
   )
