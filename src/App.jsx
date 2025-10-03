@@ -30,7 +30,7 @@ function App() {
     {
       icon: Wrench,
       title: "Electric Equipment",
-      description: "Complete range of electrical equipment and accessories. Quality components for installation, maintenance, and electrical system upgrades.",
+description: "Complete range of electrical equipment and accessories. Quality components for expert professional installation, regular maintenance, and comprehensive electrical system upgrades.",
       features: ["Cables & Wiring", "Circuit Breakers", "Inverters & Batteries", "Installation Tools"],
       image: electricEquipmentImage
     }
