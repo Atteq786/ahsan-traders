@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx'
 import { Sun, Zap, Wrench, Phone, Mail, MapPin, Menu, X, ChevronRight } from 'lucide-react'
-import logo from './assets/logo.png'
 import solarPanelFarm from './assets/solar_panel_farm.jpg'
 import generatorDiesel from './assets/generator_diesel.jpg'
 import electricEquipmentImage from './assets/electric_equipment.jpg'
@@ -43,7 +42,9 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-3">
-              <img src={logo} alt="Ahsan Traders Logo" className="h-16 w-auto" />
+              {/* Use the public Logo.png so the favicon and navbar share the same file */}
+              <img src="/Logo.png" alt="Ahsan Traders Logo" className="h-12 w-auto" />
+              <span className="ml-2 font-bold text-xl text-gray-900">Ahsan Traders</span>
             </div>
             
             {/* Desktop Navigation */}
@@ -121,15 +122,15 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="animate-fade-in">
-              <div className="text-4xl font-bold mb-2">500+</div>
+              <div className="text-4xl font-bold mb-2">50+</div>
               <div className="text-orange-100">Happy Customers</div>
             </div>
             <div className="animate-fade-in animation-delay-200">
-              <div className="text-4xl font-bold mb-2">1000+</div>
+              <div className="text-4xl font-bold mb-2">30+</div>
               <div className="text-orange-100">Projects Completed</div>
             </div>
             <div className="animate-fade-in animation-delay-400">
-              <div className="text-4xl font-bold mb-2">15+</div>
+              <div className="text-4xl font-bold mb-2">5+</div>
               <div className="text-orange-100">Years Experience</div>
             </div>
           </div>
@@ -184,7 +185,7 @@ function App() {
             <div className="animate-fade-in">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">About Ahsan Traders</h2>
               <p className="text-lg text-gray-700 mb-4">
-                With over 15 years of experience in the power and electrical equipment industry, 
+                With over 5 years of experience in the power and electrical equipment industry, 
                 Ahsan Traders has established itself as a trusted name in providing high-quality 
                 solar panels, generators, and electrical equipment.
               </p>
@@ -239,29 +240,42 @@ function App() {
             <Card className="text-center p-8 hover:shadow-xl transition-shadow animate-fade-in">
               <Phone className="w-12 h-12 text-orange-600 mx-auto mb-4" />
               <h3 className="font-bold text-xl mb-2">Phone</h3>
-              <p className="text-gray-600">+92 XXX XXXXXXX</p>
+              <p className="text-gray-600">+92 322-8613706</p>
               <p className="text-gray-600">Mon-Sat: 9AM-6PM</p>
             </Card>
 
             <Card className="text-center p-8 hover:shadow-xl transition-shadow animate-fade-in animation-delay-200">
               <Mail className="w-12 h-12 text-orange-600 mx-auto mb-4" />
               <h3 className="font-bold text-xl mb-2">Email</h3>
-              <p className="text-gray-600">info@ahsantraders.com</p>
-              <p className="text-gray-600">sales@ahsantraders.com</p>
+              <p className="text-gray-600">ahsantraders788@gmail.com</p>
+              {/* <p className="text-gray-600">sales@ahsantraders.com</p> */}
             </Card>
 
             <Card className="text-center p-8 hover:shadow-xl transition-shadow animate-fade-in animation-delay-400">
               <MapPin className="w-12 h-12 text-orange-600 mx-auto mb-4" />
               <h3 className="font-bold text-xl mb-2">Location</h3>
-              <p className="text-gray-600">Your City, Pakistan</p>
+              <p className="text-gray-600">Mughalpura, Lahore, Pakistan</p>
               <p className="text-gray-600">Visit our showroom</p>
             </Card>
           </div>
 
           <div className="mt-12 text-center">
-            <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white text-lg px-12 py-6">
-              Request a Quote
-            </Button>
+            <div className="flex items-center justify-center gap-4">
+              <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white text-lg px-12 py-6">
+                Request a Quote
+              </Button>
+
+              {/* Inline WhatsApp link with pre-filled message
+              <a
+                href="https://wa.me/923228613706?text=Hello%20I%20want%20to%20know%20more%20about%20your%20products"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-4 bg-green-500 hover:bg-green-600 text-white rounded-md font-medium"
+                aria-label="Message Ahsan Traders on WhatsApp"
+              >
+                Message Us
+              </a> */}
+            </div>
           </div>
         </div>
       </section>
@@ -271,7 +285,7 @@ function App() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <img src={logo} alt="Ahsan Traders Logo" className="h-16 mb-4 brightness-0 invert" />
+              <img src="/Logo.png" alt="Ahsan Traders Logo" className="h-16 mb-4 brightness-0 invert" />
               <p className="text-gray-400">
                 Your trusted partner for sustainable energy solutions
               </p>
@@ -306,6 +320,17 @@ function App() {
           </div>
         </div>
       </footer>
+      {/* Floating WhatsApp button (bottom-right) with improved icon & animations */}
+      <a
+        href="https://wa.me/923228613706"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+        className="whatsapp-float z-50"
+      >
+        {/* Use attached WhatsApp PNG (place in public/whatsapp-logo.png) */}
+        <img src="/src/assets/whatsapp.png" alt="WhatsApp" />
+      </a>
     </div>
   )
 }

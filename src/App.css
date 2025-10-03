@@ -147,3 +147,51 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* WhatsApp floating button styles */
+@keyframes whatsapp-pop {
+  from { transform: scale(0.6); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes whatsapp-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.32); }
+  70% { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 56px;
+  height: 56px;
+  background: #fff; /* white circle to make the green logo visible */
+  color: #fff;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(37,211,102,0.12);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  animation: whatsapp-pop 600ms cubic-bezier(.2,.9,.3,1);
+  border: 2px solid #25D366; /* green outline to match WhatsApp brand */
+}
+
+.whatsapp-float:hover,
+.whatsapp-float:focus {
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 10px 24px rgba(37,211,102,0.32);
+  animation: whatsapp-pulse 1500ms infinite;
+}
+
+.whatsapp-float:focus {
+  outline: 3px solid rgba(37,211,102,0.12);
+}
+
+.whatsapp-float img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+}
