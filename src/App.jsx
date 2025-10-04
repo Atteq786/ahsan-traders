@@ -7,6 +7,7 @@ import generatorDiesel from './assets/generator_diesel.jpg'
 import electricEquipmentImage from './assets/electric_equipment.jpg'
 import heroBackground from './assets/hero_background.jpeg'
 import whatsappIcon from './assets/whatsapp.png'
+import DarkLogo from './assets/bgrmlogo.png'
 import './App.css'
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
     {
       icon: Wrench,
       title: "Electric Equipment",
-description: "Complete range of electrical equipment and accessories. Quality components for expert professional installation, regular maintenance, and comprehensive electrical system upgrades.",
+description: "Complete range of electrical equipment and accessories. Quality components for professional installation, regular maintenance, and electrical system upgrades.",
       features: ["Cables & Wiring", "Circuit Breakers", "Inverters & Batteries", "Installation Tools"],
       image: electricEquipmentImage
     }
@@ -107,7 +108,7 @@ description: "Complete range of electrical equipment and accessories. Quality co
               Quality products, reliable service, and expert solutions for all your power needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white text-lg px-8 py-6">
+              <Button href="/products" size="lg" className="bg-orange-600 hover:bg-orange-700 text-white text-lg px-8 py-6">
                 Explore Products <ChevronRight className="ml-2" />
               </Button>
               <Button size="lg" variant="outline" className="border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white text-lg px-8 py-6">
@@ -238,23 +239,31 @@ description: "Complete range of electrical equipment and accessories. Quality co
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center p-8 hover:shadow-xl transition-shadow animate-fade-in">
-              <Phone className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-              <h3 className="font-bold text-xl mb-2">Phone</h3>
-              <p className="text-gray-600">+92 322-8613706</p>
-              <p className="text-gray-600">Mon-Sat: 9AM-6PM</p>
+            <Card className="text-center p-8 md:p-10 bg-white rounded-2xl border border-gray-100 hover:shadow-2xl transition-transform transform hover:-translate-y-2 animate-fade-in">
+              <div className="mx-auto mb-4 w-16 h-16 rounded-full flex items-center justify-center bg-orange-50 text-orange-600 border-2 border-orange-100">
+                <Phone className="w-7 h-7" />
+              </div>
+              <h3 className="font-extrabold text-lg md:text-xl mb-2">Phone</h3>
+              <p className="text-gray-600 mb-1">+92 322-8613706</p>
+              <p className="text-gray-500 text-sm">Mon-Sat: 9AM-6PM</p>
             </Card>
 
-            <Card className="text-center p-8 hover:shadow-xl transition-shadow animate-fade-in animation-delay-200">
-              <Mail className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-              <h3 className="font-bold text-xl mb-2">Email</h3>
-              <p className="text-gray-600">ahsantraders788@gmail.com</p>
+            <Card className="text-center p-8 md:p-10 bg-white rounded-2xl border border-gray-100 hover:shadow-2xl transition-transform transform hover:-translate-y-2 animate-fade-in animation-delay-200">
+              <div className="mx-auto mb-4 w-16 h-16 rounded-full flex items-center justify-center bg-orange-50 text-orange-600 border-2 border-orange-100">
+                <Mail className="w-7 h-7" />
+              </div>
+              <h3 className="font-extrabold text-lg md:text-xl mb-2">Email</h3>
+              <p className="text-gray-600 mb-1">
+                <a href="mailto:ahsantraders788@gmail.com" className="hover:text-orange-600 transition-colors">ahsantraders788@gmail.com</a>
+              </p>
               {/* <p className="text-gray-600">sales@ahsantraders.com</p> */}
             </Card>
 
-            <Card className="text-center p-8 hover:shadow-xl transition-shadow animate-fade-in animation-delay-400">
-              <MapPin className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-              <h3 className="font-bold text-xl mb-2">Location</h3>
+            <Card className="text-center p-8 md:p-10 bg-white rounded-2xl border border-gray-100 hover:shadow-2xl transition-transform transform hover:-translate-y-2 animate-fade-in animation-delay-400">
+              <div className="mx-auto mb-4 w-16 h-16 rounded-full flex items-center justify-center bg-orange-50 text-orange-600 border-2 border-orange-100">
+                <MapPin className="w-7 h-7" />
+              </div>
+              <h3 className="font-extrabold text-lg md:text-xl mb-2">Location</h3>
               <p className="text-gray-600">Mughalpura, Lahore, Pakistan</p>
             </Card>
           </div>
@@ -285,7 +294,7 @@ description: "Complete range of electrical equipment and accessories. Quality co
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <img src="/Logo.png" alt="Ahsan Traders Logo" className="h-16 mb-4 brightness-0 invert" />
+              <img src={DarkLogo} alt="Ahsan Traders Logo" className="h-16 mb-4" />
               <p className="text-gray-400">
                 Your trusted partner for sustainable energy solutions
               </p>

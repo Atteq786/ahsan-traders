@@ -74,6 +74,13 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  /* Brand orange overrides (primary brand color: #ff751f) */
+  --color-orange-50: #fff7f2;
+  --color-orange-100: #fff0e6;
+  --color-orange-400: #ffb48a;
+  --color-orange-500: #ff984f;
+  --color-orange-600: #ff751f; /* NEW brand color */
+  --color-orange-700: #e86616;
 }
 
 .dark {
@@ -108,6 +115,13 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  /* Dark-theme orange overrides (keep same brand hue but tuned if needed) */
+  --color-orange-50: #fff7f2;
+  --color-orange-100: #fff0e6;
+  --color-orange-400: #ffb48a;
+  --color-orange-500: #ff984f;
+  --color-orange-600: #ff751f; /* NEW brand color */
+  --color-orange-700: #e86616;
 }
 
 @layer base {
@@ -194,4 +208,9 @@ html {
   height: 28px;
   object-fit: contain;
   display: block;
+}
+
+/* Modal z-index helper */
+.z-60 {
+  z-index: 60;
 }
